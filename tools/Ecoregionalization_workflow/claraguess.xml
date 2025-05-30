@@ -59,9 +59,9 @@ Rscript '$__tool_directory__/claraguess.R'
 
     <tests>
         <test expect_num_outputs="3">
-            <param name="enviro" value="enviro.tabular"/>
-            <param name="preds" value="preds.tabular"/>
-            <param name="taxas" value="taxas.tabular"/>
+            <param name="enviro" value="ceamarc_env.tsv"/>
+            <param name="preds" value="1_brts_pred_ceamarc.tsv"/>
+            <param name="taxas" value="List_of_taxa.txt"/>
             <param name="type" value="fixed"/>
             <param name="k" value="3"/>
             <param name="metric" value="manhattan"/>
@@ -76,7 +76,7 @@ Rscript '$__tool_directory__/claraguess.R'
 
             <output name="silhouette_plot">
                 <assert_contents>
-                    <has_size value="8400" delta="600"/>
+                    <has_size value="9837" delta="600"/>
                 </assert_contents>
             </output>
 
@@ -88,9 +88,9 @@ Rscript '$__tool_directory__/claraguess.R'
         </test>
 
         <test expect_num_outputs="4">
-            <param name="enviro" value="enviro.tabular"/>
-            <param name="preds" value="preds.tabular"/>
-            <param name="taxas" value="taxas.tabular"/>
+            <param name="enviro" value="ceamarc_env.tsv"/>
+            <param name="preds" value="1_brts_pred_ceamarc.tsv"/>
+            <param name="taxas" value="List_of_taxa.txt"/>
             <param name="type" value="auto"/>
             <param name="k" value="3"/>
             <param name="metric" value="manhattan"/>
@@ -105,7 +105,7 @@ Rscript '$__tool_directory__/claraguess.R'
 
             <output name="silhouette_plot">
                 <assert_contents>
-                    <has_size value="8400" delta="600"/>
+                    <has_size value="9125" delta="600"/>
                 </assert_contents>
             </output>
 
